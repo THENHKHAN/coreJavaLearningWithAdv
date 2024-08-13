@@ -1,4 +1,4 @@
-package Level2;
+package Level2JavaCollectionsOper;
 
 import java.util.*;
 
@@ -15,7 +15,7 @@ public class _1_ArrayList {
         System.out.println("Here is the List : " + arrList); // [20, 30, 40]
         System.out.println("Size  : " + arrList.size()); // 3
 
-        List<String> lst = new ArrayList<>();
+        List<String> lst = new ArrayList<>(); // just for understanding that List is an interface that is implemented by ArrayList
         lst.add("Noorul");
         lst.add("Huda");
         lst.add("Khan");
