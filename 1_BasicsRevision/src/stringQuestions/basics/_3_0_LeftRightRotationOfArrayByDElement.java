@@ -4,9 +4,6 @@ package stringQuestions.basics;
 // https://www.geeksforgeeks.org/program-for-array-rotation-continued-reversal-algorithm/
 // https://www.geeksforgeeks.org/array-rotation/               -- solving from this article
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /*
 Left (Or anticlockwise) rotate the given string by d elements (where d <= n)
 Right (Or clockwise) rotate the given string by d elements (where d <= n).
@@ -88,8 +85,9 @@ The idea is to use a temporary array of size n, where n is the length of the ori
     So for any index i, we know that after rotation, the element that will occupy this position is arr[(i + d) % n]. Consequently, for every index in the cycle,
             we will place the element that should be in that position after the rotation is completed.
      */
-    private static void leftRotateUsingJuggingAlgoApproach(int[] intArr, int d){
-
+    // https://www.geeksforgeeks.org/juggling-algorithm-for-array-rotation/
+    private static void leftRotateUsingJugglingAlgoApproach(int[] intArr, int d){
+// TODO : Need to implement yet
     }
 
 
@@ -136,7 +134,7 @@ Auxiliary Space: O(1)
         for (int ele : arr3) {
             System.out.print(ele + " ");
         }
-        leftRotateUsingJuggingAlgoApproach(arr3, d3); // 3 4 5 6 1 2
+        leftRotateUsingJugglingAlgoApproach(arr3, d3); // 3 4 5 6 1 2
         /*
         Time Complexity: O(n)
         Auxiliary Space: O(1)
