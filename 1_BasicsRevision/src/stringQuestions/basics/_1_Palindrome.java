@@ -4,6 +4,12 @@ public class _1_Palindrome {
 
     // using two pointer approach
     static Boolean isPalindrome(String myStr){
+        if(myStr.isEmpty()){
+            return false;
+        }
+        if(myStr.length()==1){
+            return true;
+        }
         int l = 0;
         int r = myStr.length()-1;
         while ( l < r){
@@ -13,16 +19,24 @@ public class _1_Palindrome {
             r--;
         }
         return true;
-    }
+    } // T: O(n), S: O(1)
 
     // using other approach- after reversing and then comparing
     public static Boolean palindromeCheck(String myStr){
-        String reverseStr = "";
-                for (int i = myStr.length()-1; i >= 0 ; i--){
-                    reverseStr = reverseStr + myStr.toLowerCase().charAt(i);
+        if(myStr.isEmpty()){
+            return false;
         }
-        return myStr.toLowerCase().equals(reverseStr);
-    }
+        if(myStr.length()==1){
+            return true;
+        }
+
+        String reverseStr = ""; // TODO: use StringBuilder instead: Since append (O(1)) but concat(+= take O(n))
+                                // for more read detail searched GPT in mobile
+                for (int i = myStr.length()-1; i >= 0 ; i--){ // T: O(n), S: O(n)
+                    reverseStr = reverseStr + myStr.toLowerCase().charAt(i); // T: O(n), S: O(n)(since each iteration it create new string instance and then concat)
+        }// T: O(n^2), S: O(n^2)
+        return myStr.toLowerCase().equals(reverseStr); // T: O(n), S: O(n)
+    }// T: O(n^2), S: O(n^2)
 
     public static void main(String[] args) {
         System.out.println("#### Palindrome checking #### ");
