@@ -57,6 +57,7 @@ public class Example3EmplNamePhone {
                         // which results in List<List<String>>
                         .collect(Collectors.toList())
         );
+// [[1234567890, 1122334455], [2456801357, 2233445566], [4389079300, 5840244859], [9977554433]]
 
         System.out.println("\n The flattened List of Employee phone numbers:");
 
@@ -85,5 +86,6 @@ public class Example3EmplNamePhone {
                         // collects each phone String in flattened stream into a List
                         .collect(Collectors.toList())
         );
+        // [+91-1234567890, +91-1122334455, +91-2456801357, +91-2233445566, +91-4389079300, +91-5840244859, +91-9977554433]
     }
 }
