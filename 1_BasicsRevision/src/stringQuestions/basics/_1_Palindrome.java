@@ -1,4 +1,4 @@
-package Level1FreqUsedProgs._1_Strings;
+package stringQuestions.basics;
 
 public class _1_Palindrome {
 
