@@ -14,11 +14,11 @@ public class _2_ReverseStr {
         // Use StringBuilder for mutability
         StringBuilder res = new StringBuilder();
         for (int i = str.length()-1; i >=0 ; i--){ // Time Complexity: O(n) for backward traversal
-            res.append(str.charAt(i)) ; // add each character to a new string
-            //Auxiliary Space:  O(n) for storing the reversed string.
+            res.append(str.charAt(i)) ; //S: O(1), T:O(1) // add each character to a new string
         }
-        return res.toString() ;
-    }
+        //Auxiliary Space:  O(n) for storing the reversed string.
+        return res.toString() ;// S: O(n)
+    } // T: O(n), S: O(n)
 
     /*
  The idea is to maintain two pointers: left and right, such that left points to the beginning of the string and right points to the end of the string.
@@ -28,14 +28,15 @@ public class _2_ReverseStr {
         their corresponding character in the second half.
      */
     public static String reverseStrByTwoPointerApproach(String str) {
-        StringBuilder res = new StringBuilder(str);
+        StringBuilder res = new StringBuilder(str);// copying the original string in string builder - Initializing StringBuilder(inputStr) takes O(n) time.
         int l = 0;
         int r = str.length()-1;
 
         while (l < r){
 //            System.out.println("left : " + l + " right : " + r);
-            res.setCharAt(l, str.charAt(r) );
-            res.setCharAt(r, str.charAt(l));
+            // need to extract character : //extracting from original and putting( or replacing left to right vice versa)
+            res.setCharAt(l, str.charAt(r) );// setting character from start (result str) of original(last)
+            res.setCharAt(r, str.charAt(l));// setting character from left (result str) of original(start)
             l++;
             r--;
         }
@@ -94,6 +95,24 @@ public class _2_ReverseStr {
     private static String reverseStrByInBuiltMethod(String str){
         StringBuilder res = new StringBuilder(str); // since String Class does not have reverse method OR we could use List or Array
         return res.reverse().toString();
+    }
+
+    // TODO: Building a New String Using Two Pointers WITH CHAR ARRAY : same Optimization(space and time) as above TWO pointer Approach
+    //  but recommended StringBuilder Approach
+    private static String reverseStrUsingTwoPointer(String inputStr) {
+        int left = 0;
+        int right = inputStr.length() - 1;
+        char[] result = new char[inputStr.length()];
+
+        while (left <= right) {
+            result[left] = inputStr.charAt(right);
+            result[right] = inputStr.charAt(left);
+
+            left++;
+            right--;
+        }
+
+        return new String(result);
     }
 
     public static void main(String[] args) {
