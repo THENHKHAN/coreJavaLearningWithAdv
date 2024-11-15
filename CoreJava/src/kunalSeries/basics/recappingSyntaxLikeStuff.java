@@ -1,4 +1,4 @@
-package stringQuestions;
+package kunalSeries.basics;
 
 public class recappingSyntaxLikeStuff {
 
