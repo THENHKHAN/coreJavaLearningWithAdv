@@ -1,9 +1,0 @@
-### VS Code ###
-.vscode/
-coreJavaLearningWithAdv.iml
-.idea
-.out
-*.class
-*.out/
-*../out
-out/
