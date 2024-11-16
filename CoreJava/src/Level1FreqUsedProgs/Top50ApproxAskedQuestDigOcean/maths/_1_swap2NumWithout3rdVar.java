@@ -1,4 +1,4 @@
-package Level1FreqUsedProgs.Top50ApproxAskedQuestDigOcean;
+package Level1FreqUsedProgs.Top50ApproxAskedQuestDigOcean.maths;
 
 // TODO: swap two numbers without using a third variable in Java
 public class _1_swap2NumWithout3rdVar {
