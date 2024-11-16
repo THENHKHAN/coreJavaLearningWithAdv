@@ -1,4 +1,4 @@
-package Level1FreqUsedProgs.Top50ApproxAskedQuestDigOcean;
+package Level1FreqUsedProgs.Top50ApproxAskedQuestDigOcean.maths;
 
 // TODO: 4. Write a Java program to check if the given number is a prime number.
 public class _2_CheckPrimeNumber {

@@ -1,9 +1,9 @@
 package kunalSeries.basics.maths;
 
-// TODO: Print all Armstrong number of 3 digit number.
+// TODO: Print all Armstrong number of 3 digit number. Also between two interval. check Armstrong number
 public class _5_Check3DigArmstrongNumber {
 
-    public  static void check3DigArmstrongNumber(int order, int number){
+    public  static void checkArmstrongNumber(int order, int number){
         int calCNum = 0;
         int temp = number;
         while (number>0){
@@ -18,14 +18,38 @@ public class _5_Check3DigArmstrongNumber {
         }
 
     }
+
+    public static boolean isPalindrom(int order, int number){
+        int calCNum = 0;
+        int temp = number;
+        while (number>0){
+            int dig = number%10;
+            number /=10;
+            calCNum += (int) Math.pow(dig, order);
+        }
+
+        return calCNum == temp;
+    }
+
     public static void main(String[] args) {
         int order = 3;
-        check3DigArmstrongNumber(order, 153); // 153 is an Armstrong number
-        check3DigArmstrongNumber(4, 1253); //1253 is NOT an Armstrong number
+        checkArmstrongNumber(order, 153); // 153 is an Armstrong number
+        checkArmstrongNumber(4, 1253); //1253 is NOT an Armstrong number
         // below can be used to find the length of number if asked for n number digit then by this we can get from here order variable
 //        int num = 232424;
 //        System.out.println(String.valueOf(num).getClass().getTypeName()); // java.lang.String
 //        System.out.println(Integer.toString(num).getClass().getTypeName()); //java.lang.String
+
+
+        System.out.println("*** Checking and printing Armstrong numbers  ******");
+        int start = 100;
+        int last = 1000;
+
+        for (int i = start; i < last; i++) {
+            if (isPalindrom(order, i)){ // between 100 and 999
+                System.out.print(i + " "); // 153 370 371 407
+            }
+        }
     }
 }
 

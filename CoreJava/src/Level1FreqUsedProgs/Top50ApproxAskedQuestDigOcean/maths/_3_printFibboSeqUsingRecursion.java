@@ -1,4 +1,4 @@
-package Level1FreqUsedProgs.Top50ApproxAskedQuestDigOcean;
+package Level1FreqUsedProgs.Top50ApproxAskedQuestDigOcean.maths;
 
 import java.util.ArrayList;
 import java.util.List;
