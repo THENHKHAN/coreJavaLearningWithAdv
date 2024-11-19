@@ -1,4 +1,4 @@
-package kunalSeries.linear.search.leetcode;
+package kunalSeries.linear.search.leetcode.easy;
 
 import java.util.Arrays;
 // TODO: Leetcode: 1672. Richest Customer Wealth
