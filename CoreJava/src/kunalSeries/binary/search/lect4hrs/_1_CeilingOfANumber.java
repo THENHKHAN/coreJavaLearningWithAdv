@@ -2,15 +2,16 @@ package kunalSeries.binary.search.lect4hrs;
 
 import java.util.Arrays;
 // https://www.youtube.com/watch?v=W9QJ8HaRvJQ&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=15      at 26:40 imp
-// TODO: Q-1 : Ceiling of Number : Means find the Smallest nearest element in array greater than or equal the target number. (val>=target)
+// TODO: Q-1 : Ceiling of Number : Means find the Smallest nearest greater than or equal the target number element in array. (val>=target)
 // ex: [1,4,6,8,9] , target=7 ==> so abs will be 8 since there is no 7 present. And we look for nearest after just 7 is only 8 Hence 8 will be ans.
 public class _1_CeilingOfANumber {
 
+    // smallest number >= target number
     public static int ceiling(int[] arr, int target){
 
             if (target == arr[arr.length-1]) // target maybe number that is last number. so since ceiling is nearest >= the number.
                 return target;
-            if (target > arr[arr.length-1]) // target maybe not in the array.
+            if (target > arr[arr.length-1] || target < arr[0]) // target maybe not in the array.
                 return -1;
 
             int s = 0;
