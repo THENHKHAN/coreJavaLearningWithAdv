@@ -45,7 +45,7 @@ public class _3_PeakIndexInAMountainArray {
         }
         return l; // will reach here when l>r (when l and r cross each other) only then will get the peak. Draw on paper you'll understand.
 
-        // OTHER WAY just a small tweak: just in condiotn and else condition handling
+        // OTHER WAY just a small tweak KUNAL: just in condition and else condition handling
         /*
                 while (l<r){ // Prevents middleIndx + 1 from being out of bounds
                     int middleIndx = l+(r-l)/2;
