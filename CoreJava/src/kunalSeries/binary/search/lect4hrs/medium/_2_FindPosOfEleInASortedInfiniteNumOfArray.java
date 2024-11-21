@@ -15,18 +15,31 @@ public class _2_FindPosOfEleInASortedInfiniteNumOfArray {
         // first start with a box of size 2
         int l= 0;
         int r= 1;
+
+        // GFG Approach
         int currVal = arr[0];
         // condition for the target to lie in the range
-        while (target>currVal){
+        while (target>currVal){ // GFG like approach
             if (2*r< arr.length-1){ //length to prevent ArrayOutOfBoundException. checking that 2*h doesn't exceed array
-                System.out.println("left & right indX : " + l + ", "+r );
+//                System.out.println("left & right indX : " + l + ", "+r );
                 l = r;
                 r = 2*r; //
             }else
                 r= arr.length-1;
             currVal = arr[r];
         }
-//        System.out.println("left & right indX : " + l + ", "+r );
+
+        // KUNAL Approach
+    /*
+        // condition for the target to lie in the range
+        while (target > arr[r]) { // KUNAL
+            int temp = r + 1; // this is my new start
+            // double the box value
+            // end = previous end + sizeofbox*2
+            r = r + (r - l + 1) * 2; // doubling the array size of the previous box length - To find the arr Leg through indices: e-(s-1) =>e-s+1 (+1 bcz indices starts from 0)
+            l = temp;
+            }
+        */
         return new int[]{l, r};
     }
 
@@ -60,7 +73,7 @@ public class _2_FindPosOfEleInASortedInfiniteNumOfArray {
 
 
 //        int[] nums = {1, 4, 5, 13, 20, 28, 38, 48};
-//        int target = 13;
+//        int target = 13; // 3
         System.out.println("Array : " + Arrays.toString(nums));
         int res = obj.findPositionInInfiniteArray(nums, target);
         if(res !=-1)
