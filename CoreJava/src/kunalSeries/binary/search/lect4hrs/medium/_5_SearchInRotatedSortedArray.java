@@ -6,6 +6,7 @@ package kunalSeries.binary.search.lect4hrs.medium;
 // Aditya Board waala: https://www.youtube.com/watch?v=Id-DdcWb5AU
 // NeetCode: https://www.youtube.com/watch?v=U8XENwh8Oy8
 // Striver: https://www.youtube.com/watch?v=5qGrJbHhqFs
+// ApnaClg: https://www.youtube.com/watch?v=6WNZQBHWQJs   used
 // TODO:(amazon&Google) 33. Search in Rotated Sorted Array : Already mentioned Sorted, hence 1st approach must be Binary Search. or must write an algorithm with O(log n)
 // In simply we need to search the target element index in the given array. But the issue(simple sol. is linear search but can't apply since asked in O(logn) ) So 2nd option is BS so main thing how to apply BS in this.
 // Other LC ref: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
@@ -83,24 +84,44 @@ public class _5_SearchInRotatedSortedArray {
     }
 
 
-    // TS: 3:08:00
+    // ApnaClg: roted array can always be divided in two half: left and right - so if we divided in two part - then one will definitely be sorted and other may not(since in that pivot will lie)WHY(watch-11:00)
+                            // jis part me pivot hoga uske opposite wala part sorted hoga.
     public int searchSingleBinary(int[] nums, int target) {
+            // based on the middle element and start element we'll decide which part is sorted.
 
+        int l = 0;
+        int r = nums.length-1;
 
+        while (l<=r){
+            int mid = l+(r-l)/2;
+            if (nums[mid]==target)
+                return mid;
+            // deciding which part is sorted so that we can easily use BS type approach
+            if (nums[l]<=nums[mid]){ //[3,4,5,6,7,0,1,2] then sorted will part will be LEFT SORTED (mid-1 to 0)
 
-        return 1;
+                    // now will check in which SIDE of SORTED array will have to look into
+                    if (nums[l]<=target && target<=nums[mid]) //)in range(0,mid) then will search in LEFT
+                         r = mid-1;
+                    else //  search in RIGHT
+                         l = mid+1;
+
+            } else { // nums[mid]<nums[l]  //[6,7,0,1,2,4,5]  then sorted will part will be RIGHT SORTED (mid+1, r)
+                if (nums[mid]<=target && target<=nums[r]) // in range(mid+1,r) then will search in LEFT
+                    l = mid+1;
+                else
+                    r = mid-1;
+
+            }
+        }
+        return -1;
     }
-
-
-
-
 
     public static void main(String[] args) {
 
         _5_SearchInRotatedSortedArray obj = new _5_SearchInRotatedSortedArray();
 
-        int[] nums = {4,5,6,7,0,1,2,3}; // our pivot is 7
-        int target = 0;// 4
+//        int[] nums = {4,5,6,7,0,1,2,3}; // our pivot is 7
+//        int target = 0;// 4
 
 //        int[] nums = {4,5,6,7,0,1,2}; //our pivot is 7
 //        int target = 3;// -1
@@ -108,15 +129,21 @@ public class _5_SearchInRotatedSortedArray {
 //         int[] nums = {4,5,6,7,0,1,2}; //our pivot is 7
 //         int target = 6;// 2
 
+//        int[] nums = {6,7,0,1,2,4,5}; //our pivot is 7
+//        int target = 0;// 4
+
 //        int[] nums = {1};
 //        int target = 0;     // -1
 
-//        int[] nums = {1,5};
+//       int[] nums = {1,5};
 //        int target = 0;     // -1
 //        int target = 1;     // 0
 
 //        int[] nums = {3,1};
 //        int target = 1;     // 1
+
+        int[] nums = {8,9,10,11,0,1,2,3,4,5,6,7};
+        int target = 6;     // 10
 
 
         System.out.println("Array : " + Arrays.toString(nums));
@@ -144,7 +171,9 @@ public class _5_SearchInRotatedSortedArray {
                         b) if not found in left array then search in right array. (pivot+1, length-1)
 
             3-> Single Binary search
- // Learnt - && operator : if 1st condition false then didn't execute the 2nd or 3rd or any further condition will be not executed.
+ //TODO - Learnt - && operator : if 1st condition false then didn't execute the 2nd or 3rd or any further condition will be not executed.
+           In any roted array can always be divided in two half: left and right - so if we divided in two part -
+                then one will definitely be SORTED and other may not
  */
 
 // 33. Search in Rotated Sorted Array  : with distinct values means if we would have duplicates then we have tweak the logic.
