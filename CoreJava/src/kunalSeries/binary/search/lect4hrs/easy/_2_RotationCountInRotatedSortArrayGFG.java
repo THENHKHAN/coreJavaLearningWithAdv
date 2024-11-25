@@ -16,7 +16,7 @@ First, we will declare an ‘ans’ and an ‘index’ variable initialized with
 Next, we will iterate through the array and compare each element with the variable called ‘ans’. Whenever we encounter an element 'arr[i]' that is smaller than ‘ans’, we will update ‘ans’ with the value of 'arr[i]' and also update the 'index' variable with the corresponding index value, 'i'.
 Finally, we will return ‘index’ as our answer.
      */
- // just need to find the min elem and return its index
+    // just need to find the min elem and return its index
     public int countRotationsBruteForce(int[]arr){
         // this check not neede since in loop we are handling everything
 //        if (arr[arr.length-1]==arr.length && arr[0]<arr[arr.length-1]) // The given array is not rotated. {1, 2, 3, 4, 5} BUT Won't work for this  {6, 9, 2, 4}; since here len=4 and last indx = 4 but still rotated
@@ -30,8 +30,8 @@ Finally, we will return ‘index’ as our answer.
                 index  = i;
             }
         }
-      System.out.println("Min ele indx : " + index  + " and Ele "  + arr[index ]);
-      return index ;
+        System.out.println("Min ele indx : " + index  + " and Ele "  + arr[index ]);
+        return index ;
     }
 
     // 1st way is to find as we find minimal in rotated sorted array. Here we have to find the index of maximal number
@@ -53,22 +53,24 @@ Finally, we will return ‘index’ as our answer.
             } else if (arr[mid]<=arr[l]) {
                 r = mid-1;
             } else {  // arr[m]>arr[l] // skipping the 0 to mid-1 (since it will be ASC)
-                l = mid; // {4,5,6,7,1,2,3} here 4<7 is middle so we have to move forward but with mid as well
+                l = mid+1; // {4,5,6,7,1,2,3} here 4<7 is middle so we have to move forward but with mid as well
+                // on gfg is was failing here saying TLE . so we can do
+                // l = mid+1 since this example then we go on 2nd else if will picked up.
             }
         }
 
-        return pivot;
+        return 0;
     }
 
     public int countRotationsUsingPivotElement(int[]arr) {
-                return findPivotIndex(arr);
+        return findPivotIndex(arr);
     }
 
-        // TODO: dry run this algo and rebuild ur logic and with Pivot concept
+    // TODO: dry run this algo and rebuild ur logic and with Pivot concept
     public int countRotations(int[]arr){
 
 //        if (arr[arr.length-1]==arr.length && arr[0]<arr[arr.length-1]) // The given array is not rotated. {1, 2, 3, 4, 5} BUT Won't work for this  {6, 9, 2, 4}; since here len=4 and last indx = 4 but still rotated
-                                                                            // but after adding && arr[0]<arr[arr.length-1] condition we can avoid above issue
+        // but after adding && arr[0]<arr[arr.length-1] condition we can avoid above issue
         int l = 0;
         int r = arr.length-1;
         int ind = -1 ;
@@ -128,8 +130,9 @@ Finally, we will return ‘index’ as our answer.
 //        int[] nums = {7, 9, 11, 12, 5}; // 4
 //        int[] nums = {6, 9, 2, 4}; // 2
 //        int[] nums = {1, 2, 3, 4, 5}; // 0
-        int[] nums = {4,5,6,7,1,2,3}; // 1
-//        int[] nums = {24, 27, 45, 58, 61, 62, 64, 78, 81, 5}; // 5
+//        int[] nums = {4,5,6,7,1,2,3}; // 1
+        int[] nums = {24, 27, 45, 58, 61, 62, 64, 78, 81, 5}; // 5
+//        int[] nums = {39, 6, 11, 14, 18, 36, 37, 38}; // 1
 
         System.out.println("Array : " + Arrays.toString(nums));
         int rotationLS = obj.countRotationsBruteForce(nums); // with Brute Force Approach
@@ -143,4 +146,4 @@ Finally, we will return ‘index’ as our answer.
 
 // TODO : Ans - pivotIndex+1 => since this many element will come after rotation before the pivot. +1 since index starts from zero
 // Or We can easily observe that the number of rotations in an array is equal to the index(0-based index) of its minimum element.
-        // So, in order to solve this problem, we have to find the index of the minimum element.
+// So, in order to solve this problem, we have to find the index of the minimum element.
