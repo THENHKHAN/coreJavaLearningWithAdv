@@ -3,6 +3,7 @@
 * It is a `Comparison sort` method.
 * `Compares adjacent` elements, and swaps them if they are in the wrong order
 * Think of it as "bubbling up" the largest elements to the top (or end) of the list in each pass.
+* Remember this way : `Bubbling out the Largest number` in each pass.
 * Bubble sort also known  as `sinking` or `exchange sort`
 * It is an `in-place` ALGO.
 * Space: `O(1)` , TC: `Best - O(n)` if array is already sorted. `Worst- O(N^2)` if array is sorted in DESC order (In this case `j` never swaps for all value of i). For more [click](https://www.youtube.com/watch?v=F5MZyqRp_IM&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=17) at TS:26:00:00
