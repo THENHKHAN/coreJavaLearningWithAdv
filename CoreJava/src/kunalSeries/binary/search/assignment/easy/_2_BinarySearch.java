@@ -3,6 +3,8 @@ package kunalSeries.binary.search.assignment.easy;
 // TODO : 704. Binary Search : Intuition :  sorted in ascending order and asked - You must write an algorithm with O(log n) runtime complexity.
 // Hence Binary Search is the 1st choice
 // https://leetcode.com/problems/binary-search/
+// MyGit: https://github.com/THENHKHAN/coreJavaLearningWithAdv/blob/main/CoreJava/src/kunalSeries/binary/search/_1SearchEleAndReturnIndexInAscOrder.java
+// for Order Agnostic (ASC or DSC) : https://github.com/THENHKHAN/coreJavaLearningWithAdv/blob/main/CoreJava/src/kunalSeries/binary/search/_3OrderAgnosticBInarySearch.java
 import java.util.Arrays;
 
 public class _2_BinarySearch {
