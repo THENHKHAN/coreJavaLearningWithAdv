@@ -36,8 +36,8 @@ public class _2_FindiAllNumDissappearedInAnArray {
 
     public List<Integer> findAllDissapearedNumInArray(int[] nums) {
         int n = nums.length;
-        if (nums.length==1)
-            return new ArrayList<>(); // handling {1} - explained below where i had made test cases.
+//        if (nums.length==1) // already handling below
+//            return new ArrayList<>(); // handling {1} - explained below where i had made test cases.
         int i = 0 ; // loop controlling variable
         List<Integer> lst =new ArrayList<>();
         while (i<n){
@@ -49,7 +49,6 @@ public class _2_FindiAllNumDissappearedInAnArray {
                 i++;  // if we get same element so it adjust the already correct element indx as well as  duplicate element.
         }
 
-        boolean missingElePresentInTheGivenArrayRange = true;
         // to traver the array and if you found any element(arr[i]) that is not equal to the index(ith+1) then that index will be our answer.
        // search for first missing number
         for (int j = 1; j < n; j++) { // 0 <= nums[i] <= n hence will start loop from 0
