@@ -68,3 +68,26 @@ public class _3_FindDuplicateNumber {
         System.out.println("Missing number from above Array: " + repeatedNumber);
     }
 }
+/*
+Problem:
+Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+There is only one repeated number in nums, return this repeated number.
+You must solve the problem without modifying the array nums and using only constant extra space.
+
+
+without modifying the array nums -- but still solivng with cyclic sort why???????????
+HERE IS  why:
+The reason why cyclic sort is a preferred technique comes down to two key factors: the constraints of the
+ problem (constant space and no modification of the array) and the nature of the data (the range of numbers).
+
+In the problem you've described, we have an array of size n + 1, where each integer is in the range [1, n].
+    Given these constraints, the cyclic sort algorithm can still be applied without violating the "no modifying the array" condition, and it achieves a very efficient solution.
+
+
+ When the problem statement says "without modifying the array nums", it means:
+    - You cannot modify the values of the elements in the array. This means you are not allowed to directly change the value
+        of any element (e.g., assigning nums[i] = 5).
+    - There is no restriction on the positions of the elements. You are allowed to rearrange or swap elements in the array,
+    as long as the final result doesn't modify the values themselves.
+
+ */
