@@ -48,8 +48,10 @@ Selection Sort is a comparison-based sorting algorithm. It sorts an array by rep
 
      * **Approach :** All the given array values should be in the `range of 1 to N` or `0 to N`. If the range is `1 to N ` then every array element’s correct position will be the `index == value-1` i.e. means at the 0th index value will be 1 similarly at the 1st index position value will be 2 and so on till nth value. <br> 
                        similarly `for 0 to N values` correct index position of each array element or `value will be the same as its value` i.e. at 0th index 0 will be there 1st position 1 will be there.
+                        
 <br><br>
 * _**Conclusion**_: The Range is the Biggest `Clue` or `Hint/Intuition` to solve sorting questions or any questions ([example-finding missing number leetcode](https://leetcode.com/problems/missing-number/description/))
+    * **Problem Perspective**  : It helps to solve questions not only sorting number but also if you see those range type mention then try to think about this algo 1st. Specially for finding num. [find Missing Num](https://leetcode.com/submissions/detail/1466429363/), [find all disparaged num in array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) , [find duplicate number](https://leetcode.com/problems/find-the-duplicate-number/description/) 
 * **Articles**:
     * [*kunal](https://www.youtube.com/watch?v=JfinxytTYFQ&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=20) - explained 2nd Type of above GFG
     * [educative](https://www.educative.io/answers/what-is-a-cyclic-sort-algorithm)
