@@ -1,5 +1,5 @@
 Pattern Questions
-
+### Reference : [kunal Lect](https://www.youtube.com/watch?v=lsOOs5J8ycw&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=22)
 Print these patterns using loops:
 
 ```text
