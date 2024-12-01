@@ -4,7 +4,7 @@
   * Numeric Patterns
   * Character Patterns
 
-##### Here is 35 Patterns : [check](/35patterns.md)
+##### Here is  Top 35 Patterns : [check]([/35patterns.md](https://github.com/THENHKHAN/coreJavaLearningWithAdv/blob/main/CoreJava/src/kunalSeries/patternsprinting/35patterns.md))
 
 ### <div style="text-align: left;"> How to Print Patterns in Java? </div>
 Printing patterns in Java is a common exercise for beginners. Patterns are designs made by `arranging symbols or numbers in a specific way`. This task `helps you understand loops and control statements`, which are fundamental concepts in programming.
