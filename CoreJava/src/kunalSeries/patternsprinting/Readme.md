@@ -18,13 +18,13 @@ In Java, loops and control statements are used to print patterns. Loops repeat a
 
 #### Steps to Solve
 1. **Understand the Pattern**: <br>
-   Analyze the pattern to understand the relation between the row numbers and the number of stars in each row. In this example, the number of stars in each row equals the row number.
+   Analyze the pattern to `understand the relation between the row numbers and the number of stars in each row`. In this example, the number of stars in each row equals the row number(square pattern).
 
 2. **Initialize the Loop for Rows:** <br>
-   Use a loop to iterate through the rows. The number of iterations should equal the number of rows in the pattern.
+   Use a loop to iterate through the rows. The _number of iterations should equal the number of rows in the pattern_.
     
 3. **Nested Loop for Printing Stars:** <br>
-   Inside the loop for rows, use another loop to print stars in each row. The number of stars is equal to the current row number.
+   Inside the loop for rows, use another loop to print stars in each row. The number of stars is equal to the current row number(square pattern).
 
 4. **Move to the Next Line After Printing Stars in a Row:**
    After printing stars in a row, print a newline character to move to the next row.
