@@ -4,10 +4,10 @@
   * Numeric Patterns
   * Character Patterns
 
-##### Here is  Top 35 Patterns : 
-* [check](https://github.com/THENHKHAN/coreJavaLearningWithAdv/blob/main/CoreJava/src/kunalSeries/patternsprinting/35patterns.md) : Mine <br>
-* [edurek](https://www.edureka.co/blog/30-pattern-programs-in-java/)<br>
-* [some other](https://www.shiksha.com/online-courses/articles/star-pattern-programs-in-java/)<br>
+##### Top Patterns : 
+* [check](https://github.com/THENHKHAN/coreJavaLearningWithAdv/blob/main/CoreJava/src/kunalSeries/patternsprinting/35patterns.md) : Mine - Here is  Top 35 from Kunal Assignment<br>
+* [edurek](https://www.edureka.co/blog/30-pattern-programs-in-java/): Top 30 <br>
+* [some other](https://www.shiksha.com/online-courses/articles/star-pattern-programs-in-java/): Top 10<br>
 
 ### <div style="text-align: left;"> How to Print Patterns in Java? </div>
 Printing patterns in Java is a common exercise for beginners. Patterns are designs made by `arranging symbols or numbers in a specific way`. This task `helps you understand loops and control statements`, which are fundamental concepts in programming.
