@@ -9,6 +9,7 @@
 * [edurek](https://www.edureka.co/blog/30-pattern-programs-in-java/): Top 30 <br>
 * [Study2Night](https://www.studytonight.com/post/list-of-all-star-pattern-programs-in-c-language)
 * [CodeForWin](https://codeforwin.org/c-programming/star-patterns-program-in-c)
+* [javaTpoint](https://www.javatpoint.com/star-program-in-c)
 * [some other](https://www.shiksha.com/online-courses/articles/star-pattern-programs-in-java/): Top 10<br>
 
 ### <div style="text-align: left;"> How to Print Patterns in Java? </div>
