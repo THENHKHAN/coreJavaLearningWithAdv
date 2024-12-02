@@ -64,8 +64,8 @@ public class _1_SquareRootOfNum {
         int num = 2147395599; //  46339
 //        int num = 2147395600; //  46340
         System.out.println("Brute Force - Square Root of " + num +" : " + findSqrtBruteForce(num)); //O(Sqrt(N))
-        System.out.println("Binary Search- Square Root of " + num +" : " + findSqrtBinarySearch(num)); // O(logn)
-        // well O(logN) is better TC than O(Sqrt(N))
+        System.out.println("Binary Search- Square Root of " + num +" : " + findSqrtBinarySearch(num)); // O(logSqrt(n))
+        // well O(logSqrt(N)) is better TC than O(Sqrt(N))
     }
 
 
