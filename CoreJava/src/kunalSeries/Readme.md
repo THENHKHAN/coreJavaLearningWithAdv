@@ -12,4 +12,15 @@
 * [algoMonster](https://algo.monster/problems/stats) - Talk about algo pattern mostly asked with Chart
 
 ### <div style="text-align: left;"> Syllabus Covering: </div>
-* 
+* [Array(Linear Search)](https://github.com/THENHKHAN/coreJavaLearningWithAdv/tree/main/CoreJava/src/kunalSeries/linear/search)
+* [Array (1D, 2D, 4hrs with leetcode - Binary Search)](https://github.com/THENHKHAN/coreJavaLearningWithAdv/tree/main/CoreJava/src/kunalSeries/binary/search)
+* [Basic oncepts , String & Others](https://github.com/THENHKHAN/coreJavaLearningWithAdv/tree/main/CoreJava/src/kunalSeries/basics/concepts)
+* [Sorting ALGO](https://github.com/THENHKHAN/coreJavaLearningWithAdv/tree/main/CoreJava/src/kunalSeries/sortingalgo)
+* [Pattern Printing](https://github.com/THENHKHAN/coreJavaLearningWithAdv/tree/main/CoreJava/src/kunalSeries/patternsprinting)
+
+* ### Assignments: In Progress
+   * [Binary Search](https://github.com/THENHKHAN/coreJavaLearningWithAdv/tree/main/CoreJava/src/kunalSeries/binary/search/assignment)
+   * [Arrays Or Linear Search](https://github.com/THENHKHAN/coreJavaLearningWithAdv/tree/main/CoreJava/src/kunalSeries/linear/search/leetcode)
+   * [String](https://github.com/THENHKHAN/coreJavaLearningWithAdv/tree/main/CoreJava/src/kunalSeries/stringassignment/)
+
+
