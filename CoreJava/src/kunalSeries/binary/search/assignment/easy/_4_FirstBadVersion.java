@@ -33,7 +33,7 @@ public class _4_FirstBadVersion {
                 if (isBadVersion(firstBadVersion))
                     // If 'mid' is a bad version, then the first bad version must be at 'mid' or before it.
                     // Narrow the search range to the left half by setting 'r' to 'mid - 1'.
-                    r = firstBadVersion-1;
+                    r = firstBadVersion-1; // since we need 1st bad version so we are search before the mid
                 else // if ( isBadVersion( firstBadVersion ) == false )
                     // If 'mid' is not a bad version, then the first bad version must be after 'mid'.
                     // Narrow the search range to the right half by setting 'l' to 'mid + 1'.
