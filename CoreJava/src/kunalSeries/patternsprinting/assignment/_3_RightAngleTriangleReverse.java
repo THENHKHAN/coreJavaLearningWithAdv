@@ -13,9 +13,10 @@ package kunalSeries.patternsprinting.assignment;
 
 public class _3_RightAngleTriangleReverse {
     public static void main(String[] args) {
+        int n = 5;
         int row = 5;
-        for (int i = 0; i < row ; i++) {
-            for (int j = 1; j <= row-i ; j++) { // we are decreasing ith number cols for each increasing row.
+        for (int i = 1; i <= row ; i++) {
+            for (int j = 1; j <= row+1-i ; j++) { // we are decreasing ith number cols for each increasing row.
                 System.out.print("* ");
             }
             System.out.println();
