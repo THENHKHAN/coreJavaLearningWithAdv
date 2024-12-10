@@ -1,3 +1,4 @@
+### <div style="text-align: center;"> [Recursion](https://www.youtube.com/watch?v=M2uO2nMT0Bk&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=23&pp=iAQB) </div>
 
 
 ### <div style="text-align: left;"> Why Recursion: </div>
@@ -20,19 +21,22 @@
 5. See how values and what type of value(int, str, e.t.c) are returned at each step. See where the function call will come out. In the end, you'll come out of the main() function. 
 6. Most Important after above - This is where I was used to get confused most of the time:
     * **Working with variables:**
-      1. **return type:** if return type is mention in the function then always return after recurrence call just do it DON'T OverThink.
-      2. **params:** variable on which **dependency** is there then take them in the params (**for ex:** In BS- search space is relying on `l` and `r` hence take them as well in the args)
+      1. **return type:** if return type is mention in the function then always return after recurrence call just do it DON'T OverThink. When see a return type then in recurrence call must be return.
+      2. **params:** variable on which **dependency** is there then take them in the params (**for ex:** In BS- search space is relying on `l` and `r` hence take them as well in the args).  The **variable you'll need in recurrence call, put in the function Params without thinking twice**.
       3. **introduced in the body or function Body** : 
 
-* Ex: Binary Search if you want to search in size of array N. `f(N) = O(1) + O(N/2)`. O(1) for comparison with mid element and remaining N/2 search i.e. N/2 (half of array)  in each step reduced, it will be divided into  N/2 in each step. 
+* **Ex**: Binary Search if you want to search in size of array N. `f(N) = O(1) + O(N/2)`. O(1) for comparison with mid element and remaining N/2 search i.e. N/2 (half of array)  in each step reduced, it will be divided into  N/2 in each step. 
 
-* Tips: Make sure to return the result of a function call of  the return type(we are talking about function definition 1st line where that function is returning anything or not).  
+* **Tips**: Make sure to return the result of a function call of  the return type(we are talking about function definition 1st line where that function is returning anything or not).  
 
 ### <div style="text-align: left;"> Types of Recurrence Relation: </div>
 1. **Linear recurrence relation:** ex- **fibo** : `fibo(n) = f(n-1) +f(n-2)`. Linearly
-2. **Divide and Conquer relation:** ex: **Binary** : `F(N) = F(1) + F(N/2)`. Diving with `some factor` (Here in BS factor is 2). so it will be more faster than adding/subtracting one by one or linearly.
+2. **Divide and Conquer relation:** ex: **Binary** : `F(N) = O(1) + F(N/2)`. Diving with `some factor` (Here in BS factor is 2). so it will be more faster than adding/subtracting one by one or linearly.
 
 **Tips (vvv):**  DON'T Overthink.
+
+
+
 
 ### <div style="text-align: left;"> Tail Recursion: </div>
 In this type of recursion, the `recursive call is the last operation in the function`. The result of the recursive call is directly returned without any further computation. Tail recursion is generally more memory-efficient because the compiler or interpreter can optimize the recursive calls to avoid using extra stack space.
