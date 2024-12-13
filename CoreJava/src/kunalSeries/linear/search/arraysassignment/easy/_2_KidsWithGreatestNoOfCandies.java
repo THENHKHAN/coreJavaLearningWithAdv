@@ -1,4 +1,4 @@
-package kunalSeries.arraysassignment.easy;
+package kunalSeries.linear.search.arraysassignment.easy;
 
 // TODO - easy: 1431. Kids With the Greatest Number of Candies
 // ref : https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/
