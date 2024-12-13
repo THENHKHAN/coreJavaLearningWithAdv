@@ -1,4 +1,4 @@
-package kunalSeries.arraysassignment.easy;
+package kunalSeries.linear.search.arraysassignment.easy;
 
 // TODO:  1470. Shuffle the Array
 // https://leetcode.com/problems/shuffle-the-array/description/
