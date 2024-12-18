@@ -3,8 +3,10 @@ package kunalSeries.basics.concepts.timespacecomplexity;
 public class TimeStampOfLecture {
     public static void main(String[] args) {
         System.out.println("Hello");
+        // this lecture notes:
+// notes : https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/15-complexity/Time%20and%20space%20notes
 
-
+// Here is the note(handwritten): https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/blob/main/lectures/15-complexity/Complexity%20Analysis.pdf
     /*
     TODO: Space Complexity:
         00:54:00
