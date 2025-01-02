@@ -6,7 +6,6 @@ import java.util.Arrays;
 // Find th unique number in a given array.
 // discussed all 3 approach:   https://www.geeksforgeeks.org/find-element-appears-array-every-element-appears-twice/
 // https://takeuforward.org/arrays/find-the-number-that-appears-once-and-the-other-numbers-twice/
-/
 
 public class _2_EveryNumAppeartwiceOneNumberOnlyOnceFindThatNum {
 
