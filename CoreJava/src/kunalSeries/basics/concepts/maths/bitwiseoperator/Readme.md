@@ -1,4 +1,8 @@
-### <div style="text-align: left;"> Are bitwise operators only applicable to integer types? </div>
+
+**Following this Kunal Lecture :** <br>
+         - [Notes](https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/16-math) <br>
+         - [Lecture](https://www.youtube.com/watch?v=fzip9Aml6og&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=46) <br>
+**Are bitwise operators only applicable to integer types?**
 * In Java, bitwise operators perform operations on integer data at the individual bit-level. Here, the `integer` data includes `byte`, `short`, `int`, and `long` types of data.
 * Bitwise operators are available in most languages that support integer data types, but the behavior of these operators and the size of the integers they work on may vary. Most languages allow bit-level manipulation of integer types, making bitwise operations a common feature across many programming environments.
 1. **Bitwise AND (&) Operator:**
@@ -42,7 +46,13 @@
               Ex: a=5, n = 1 ==> 5<<1 ===> 5*2^1 => 5 * 2 => 10
               so for n=1 ==> a<<1 ==> 2a
           ```
-   
+         * **Applications of LEFT Shift Operator:** <br>
+            * Multiplication by Powers of Two: Left shifting a number by n positions is equivalent to multiplying it by 2^n and is much faster than normal multiplication. <br>
+            * Efficient Calculations: Used in performance-critical applications where arithmetic operations need to be fast. <br>
+            * Bit Manipulation:  Common in low-level programming, such as embedded systems and hardware interfacing.
+         * **Articles:** know how its working internally
+            * [log2base2](https://www.log2base2.com/C/bitwise/bitwise-left-shift-operator-in-c.html)
+         
       2. **[Right Shift Operator(>>)](https://www.geeksforgeeks.org/bitwise-shift-operators-in-java/):** In C/C++ there is only one right shift operator ‘>>’ which should be used only for positive integers or unsigned integers. Use of the right shift operator for negative numbers is not recommended in C/C++, 
                and when used for negative numbers, the output is compiler dependent. Unlike C++, Java supports following two right shift operators.
                <br> <br>
@@ -62,4 +72,16 @@
          If I shift 14 by 2 position to the right, output will be 14 / 4 = 3. i.e 14/4 =3.5 since it’s an integer, fractional part will not be considered.
       
          In general, if we shift a number by n times to right, the output will be number / (2^n) .
-         ````  
+         ````
+         * **Applications of RIGHT Shift Operator:** <br>
+           * Division by Powers of Two:: Right shifting a number by n positions is equivalent to dividing it by 2^n and it is very fast. <br>
+           * Efficient Calculations: Used in performance-critical applications for fast division operations. <br>
+           * Bit Manipulation: Useful in extracting specific bits from data, common in data compression and cryptography.
+
+# Important Observation:
+* The mathematical relationship between uppercase and lowercase letters. In ASCII, the difference between the uppercase letters ('A' to 'Z') and their corresponding lowercase counterparts ('a' to 'z') is exactly 32. This means you can convert an uppercase letter to its lowercase equivalent by adding 32 to its ASCII value.
+  * **Use case:** <br>
+       * If we take any uppercase letter and add 32 to its ASCII value, we get the corresponding lowercase letter.
+       * EX: The ASCII value for 'A' is 65, and for 'a' it is 97. The difference is 32. `'A'+32 = 97 ASCII ==> Char 'a'`
+<br><br><br>
+* All the binary Bitwise operators follow the Associative property. I.e. XOR is commutative and associative, meaning the order of operations does not matter. Ex: findUniqNumber using Bitwise operator.       
