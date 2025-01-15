@@ -9,12 +9,21 @@ The throw statement is used together with an exception type. There are many exce
  */
 
 
+// Throwing User-defined Exception
+// class represents user-defined exception
+class UserDefinedException extends Exception {
+    // constructor
+    public  UserDefinedException (String str){
+        // Calling constructor of parent Exception
+        super(str);
+    }
+}
 
-public class _2_ThrowAndThrowsKeyword {
+
+public class _2_ThrowKeyword {
 // Throw an exception if age is below 18 (print "Access denied"). If age is 18 or older, print "Access granted":
 public static void checkAgeAndThrowKeyword(int age){
         if (age<18){
-
             throw new ArithmeticException("Access denied - You must be at least 18 years old.");
         }else{
         System.out.println("Access granted - You are old enough!");
@@ -40,11 +49,22 @@ public static void fun() {
             throw e;     // rethrowing the exception. This means we are throwing the exception from here to main() catch block.
         }
     }
+
     public static void main(String[] args) {
             int age = 10;
-//            checkAgeAndThrowKeyword(age);
+            checkAgeAndThrowKeyword(age);
+            /* OUTPUT: if age < 18
+            Exception in thread "main" java.lang.ArithmeticException: Access denied - You must be at least 18 years old.
+                at kunalSeries.basics.concepts.exceptionHandlingFromEngDigest._2_ThrowKeyword.checkAgeAndThrowKeyword(_2_ThrowKeyword.java:17)
+                at kunalSeries.basics.concepts.exceptionHandlingFromEngDigest._2_ThrowKeyword.main(_2_ThrowKeyword.java:44)
+
+        IT WILL STOP THE FLOW - SO to handle it, try to keep checkAgeAndThrowKeyword in try-catch (used in Enterprise application) like we did in fun() function.
+
+             */
             String s="abc"; // Initializing a String with non-numeric characters
-//            numberFormatException(s);
+            numberFormatException(s);
+                                        /*Alphabet string can't be parsed into Int. Exception msg: For input string: "abc"
+                                            Error: Unable to parse the string as an integer.*/
 
     // 3rd throw keyword example:
         /*
@@ -55,16 +75,33 @@ public static void fun() {
          */
         try {
             fun();
+            System.out.println("Code after fun() function call..");
         }
         catch (NullPointerException e) {
             System.out.println("Caught in main.");
         }
+        /*
+        OUTPUT:
+        Caught inside fun().
+        Caught in main.
+         */
+
+
+        // Throwing User-defined Exception
+        try{
+           // throw an object of user defined exception
+            throw  new UserDefinedException("This is user defined exception msg from throw keyword!! ");
+        } catch (UserDefinedException ude){
+            System.out.println("Caught the exception in catch block UserDefinedException .");
+            // Print the message from MyException object
+            System.out.println("Msg from user defined exception using e.getMsg() ->    "  +ude.getMessage());
+            /*
+            OUTPUT:
+            Caught the exception in catch block UserDefinedException .
+            Msg from user defined exception using e.getMsg() ->    This is user defined exception msg from throw keyword!!
+            THROWS CUSTOM user defined Exception and handled as well. It won't break the whole flow since handled.
+             */
+
+        }
     }
 }
-/*
-if age < 18
-
-Exception in thread "main" java.lang.ArithmeticException: Access denied - You must be at least 18 years old.
-	at kunalSeries.basics.concepts.exceptionHandlingFromEngDigest._2_ThrowAndThrowsKeyword.checkAgeAndThrowKeyword(_2_ThrowAndThrowsKeyword.java:15)
-	at kunalSeries.basics.concepts.exceptionHandlingFromEngDigest._2_ThrowAndThrowsKeyword.main(_2_ThrowAndThrowsKeyword.java:23)
- */
