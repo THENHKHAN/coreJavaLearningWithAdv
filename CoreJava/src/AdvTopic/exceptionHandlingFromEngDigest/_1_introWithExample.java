@@ -1,6 +1,40 @@
 package kunalSeries.basics.concepts.exceptionHandlingFromEngDigest;
 
 public class _1_introWithExample {
+
+    public static void simpleTryCatchEx(){
+        try {
+            int s = 10/0;
+        }catch (ArithmeticException e){
+//            System.out.println("only Exception ref printing by e : " +e); // only Exception ref printing by e : java.lang.ArithmeticException: / by zero
+            System.out.println("getMSG() : " +e.getMessage());
+//            System.out.println("e.toString() : " +e.getMessage()); // will give same msg as getMsg
+            System.out.println("Below is e.printStackTrace() .... \n");
+            e.printStackTrace();
+            // other way to print in sequence
+//            e.printStackTrace(System.out); // Print stack trace explicitly to System.out
+        }
+
+        System.out.println("Handled Exceptions!!");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(i);
+        }
+        /*
+        OUTPUT:
+        getMSG() : / by zero
+        Below is e.printStackTrace() ....
+
+        Handled Exceptions!!
+        0
+        1
+        2
+        3
+        java.lang.ArithmeticException: / by zero
+            at kunalSeries.basics.concepts.exceptionHandlingFromEngDigest._3_ThrowsKeyword.main(_3_ThrowsKeyword.java:8)
+
+         */
+    }
+
     public static void main(String[] args) {
         try {
             int a = 10;
@@ -28,5 +62,7 @@ public class _1_introWithExample {
         }
 
         System.out.println("Final EXIT of MAIN function even after getting exception!!!");
+
+        simpleTryCatchEx();
     }
 }
