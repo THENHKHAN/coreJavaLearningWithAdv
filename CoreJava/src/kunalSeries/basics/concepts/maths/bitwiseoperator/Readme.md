@@ -1,4 +1,4 @@
-
+## Holded this [lecture-25](https://www.youtube.com/watch?v=fzip9Aml6og&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=73): 00:47:00 
 **Following this Kunal Lecture :** <br>
          - [Notes](https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/16-math) <br>
          - [Lecture](https://www.youtube.com/watch?v=fzip9Aml6og&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=46) <br>
