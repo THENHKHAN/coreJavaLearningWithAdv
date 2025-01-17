@@ -29,8 +29,35 @@
 
 * **throw and throws in Java:** [ref-GFG](https://www.geeksforgeeks.org/throw-throws-java/?ref=lbp)
      * The Java `throw` keyword is used to explicitly `throw a single exception`.
-     * When we throw an exception, the flow of the program moves from the try block to the catch block.
-``` 
+     * When we throw an exception, the flow of the program moves from the try block to the catch block. see the program(_2_ThrowKeyword. fun function calling in main).
+     * for more [jataTpoint](https://www.javatpoint.com/throw-keyword)
+     * **THROW:** Stops the current flow of execution immediately.
+     * **THROWS:** It forces the caller to handle the declared exceptions.
+     * **throw** keyword mostly used for `custom/user-defined exception` because you won't see any difference if you will use with predefined exception classes.[ watch for more-00:20:00 hrs](https://www.youtube.com/watch?v=vldtYXFmZSc&list=PLlhM4lkb2sEjaU-JAASDG4Tdwpf-JFARN&index=10)
+```java 
 throw new exception_class("error message");
-ex- throw new IOException("sorry device error");   
+// ex- throw new IOException("sorry device error");   
 ```
+ *  **Java throws:**  throws is a keyword in Java that is used in the `signature of a method` to indicate that `this method might throw` one of the listed type exceptions. The `caller to these methods has to handle the exception`using a try-catch block. 
+```java 
+type method_name(parameters) throws exception_list
+
+// EX:
+static void fun() throws IllegalAccessException
+{
+  System.out.println("Inside fun(). ");
+  throw new IllegalAccessException("demo");
+}
+```
+* Important Points to Remember: </div>
+    * throws keyword is required only for checked exceptions and usage of the throws keyword for unchecked exceptions is meaningless.
+    * throws keyword is required only to convince the compiler and usage of the throws keyword does not prevent abnormal termination of the program.
+    * With the help of the throws keyword, we can provide information to the caller of the method about the exception.
+    
+* **What exactly Check and Unchecked Exception??**   [Read-stackOverflow](https://stackoverflow.com/questions/28896120/why-filenotfoundexception-is-checkedexception)  
+     * Exceptions always encountered at runtime only, Difference is made when a exception is handled.
+     * Checked or unchecked means whether it is `forced to handle at compile time` or it will only be identified when it is encountered at runtime.
+     * [YT-explained well](https://www.youtube.com/watch?v=XbBC7Tdv10U&list=PLlhM4lkb2sEjaU-JAASDG4Tdwpf-JFARN&index=3)
+    
+
+  
