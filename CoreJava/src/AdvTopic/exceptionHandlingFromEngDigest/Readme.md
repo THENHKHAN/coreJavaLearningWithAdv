@@ -32,7 +32,7 @@
      * When we throw an exception, the flow of the program moves from the try block to the catch block. see the program(_2_ThrowKeyword. fun function calling in main).
      * for more [jataTpoint](https://www.javatpoint.com/throw-keyword)
      * **THROW:** Stops the current flow of execution immediately.
-     * **THROWS:** It forces the caller to handle the declared exceptions.
+     * **THROWS:** It forces the caller to handle the declared exceptions. [for more:watch](https://www.youtube.com/watch?v=DOdRZk-kKYc&list=PLlhM4lkb2sEjaU-JAASDG4Tdwpf-JFARN&index=10)
      * **throw** keyword mostly used for `custom/user-defined exception` because you won't see any difference if you will use with predefined exception classes.[ watch for more-00:20:00 hrs](https://www.youtube.com/watch?v=vldtYXFmZSc&list=PLlhM4lkb2sEjaU-JAASDG4Tdwpf-JFARN&index=10)
 ```java 
 throw new exception_class("error message");
@@ -49,10 +49,12 @@ static void fun() throws IllegalAccessException
   throw new IllegalAccessException("demo");
 }
 ```
-* Important Points to Remember: </div>
-    * throws keyword is required only for checked exceptions and usage of the throws keyword for unchecked exceptions is meaningless.
-    * throws keyword is required only to convince the compiler and usage of the throws keyword does not prevent abnormal termination of the program.
+* For `throws`, you can refer `_3_ThrowsKeyword` program. Or [watch YT](https://www.youtube.com/watch?v=DOdRZk-kKYc&list=PLlhM4lkb2sEjaU-JAASDG4Tdwpf-JFARN&index=10)
+* **Important Points to Remember:** </div>
+    * **throws** keyword is required only for checked exceptions and usage of the throws keyword for unchecked exceptions is meaningless.
+    * **throws** keyword is required only to convince the compiler and usage of the throws keyword does not prevent abnormal termination of the program.
     * With the help of the throws keyword, we can provide information to the caller of the method about the exception.
+    * **throws** used with checked exception and not checked.
     
 * **What exactly Check and Unchecked Exception??**   [Read-stackOverflow](https://stackoverflow.com/questions/28896120/why-filenotfoundexception-is-checkedexception)  
      * Exceptions always encountered at runtime only, Difference is made when a exception is handled.

@@ -2,6 +2,16 @@ package kunalSeries.basics.concepts.exceptionHandlingFromEngDigest;
 
 // TODO: The throw statement allows you to create a custom error.
 // REF: https://www.geeksforgeeks.org/throw-throws-java/?ref=lbp
+// https://www.javatpoint.com/throw-keyword
+
+/*
+VERY IMP:
+* **THROW:** Stops the current flow of execution immediately.
+* **THROWS:** It forces the caller to handle the declared exceptions.
+* **throw** keyword mostly used for `custom/user-defined exception` because you won't see any difference if you will use with predefined exception classes.[ watch for more-00:20:00 hrs](https://www.youtube.com/watch?v=vldtYXFmZSc&list=PLlhM4lkb2sEjaU-JAASDG4Tdwpf-JFARN&index=10)
+
+ */
+
 /*
 The throw statement is used together with an exception type. There are many exception types available in Java:
     ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc
@@ -10,8 +20,11 @@ The throw statement is used together with an exception type. There are many exce
 
 
 // Throwing User-defined Exception
-// class represents user-defined exception
+// this class represents user-defined exception
 class UserDefinedException extends Exception {
+            // Extending Exception - so that we can use super(msg) and will print meaningful msg.
+                // It's better to use RuntimeException for unchecked and for Check use Exception.
+                // ultimately RuntimeException extends Exception.
     // constructor
     public  UserDefinedException (String str){
         // Calling constructor of parent Exception
