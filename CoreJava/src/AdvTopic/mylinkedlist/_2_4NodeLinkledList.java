@@ -1,7 +1,7 @@
 package AdvTopic.mylinkedlist;
 
 //Explained With Pic N Code:  https://docs.google.com/document/d/1dveOAWkyqF37fyNLMBCxOpZaegr94CLKKZwlzUWKDYw/edit?tab=t.0#heading=h.p4xdklizelis
-
+ // In knhkhan ID
 class Node {
     public int data;
     public Node next;
